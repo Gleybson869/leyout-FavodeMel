@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+   background-color: white;
+}
+
+header {
+    background-color:yellow ;
+    padding: 80px 80px 30px 50px;
+}
+header > a {
+    font-size: 1.1em;
+    background-color: rgba(0, 0, 0, 0.97);
+    color: white;
+    margin: 7px;
+    padding: 5px;
+    border-radius: 7px;
+    text-decoration: none;
+    box-shadow: 5px 2px 8px rgba(0, 0, 0, 0.296);
+}
+
+.hexagon {
+    width: 100px;
+    height: 57.74px;
+    background-color: #6C6;
+    position: relative;
+    margin: 28.87px 0;
+}
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 28.87px solid #6C6;
+}
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 28.87px solid #6C6;
+}
+#honeycomb {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-image: url('caminho/para/sua-foto.jpg'); /* Adicione o caminho para a sua foto */
+    background-size: cover; /* Isso faz com que a imagem cubra todo o container */
+    background-position: center; /* Centraliza a imagem de fundo */
+  }
+  
+  .hexagon {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 204, 0, 0.8); /* Cor do hexágono com um pouco de transparência */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  .hexagon img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
