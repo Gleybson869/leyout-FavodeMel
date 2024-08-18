@@ -25,7 +25,7 @@
 }
 
 body{
-   background-image: url(../image/image2.jpg);
+   background-image: url(../image/image7.jpg);
    background-size: cover;
    background-position: center;
 
@@ -40,14 +40,8 @@ header {
     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.421);
 }
 
-.logo a {
-  display: flex; /* Coloca o texto e a imagem na mesma linha */
-  align-items: center; /* Centraliza verticalmente o texto em relação à imagem */
-  text-decoration: none; /* Remove o sublinhado do link */
-}
-
 .logo img {
-  margin-right: 5px; /* Ajuste o valor para aproximar ou afastar o texto da imagem */
+  margin-right: 10px; /* Ajuste o valor para aproximar ou afastar o texto da imagem */
   width: 70px; /* Ajuste conforme o tamanho da imagem desejada */
   height: auto; /* Mantém a proporção da imagem */
   filter:drop-shadow(4px 3px 5px rgba(0, 0, 0, 0.729));
@@ -61,6 +55,9 @@ header {
   font-family: var(--fonte-bee);/* Exemplo de fonte para o texto */
   font-size: 40px; /* Tamanho do texto */
   color:var(--cor4); /* Cor do texto */
+  display: flex; /* Coloca o texto e a imagem na mesma linha */
+  align-items: center; /* Centraliza verticalmente o texto em relação à imagem */
+  text-decoration: none; /* Remove o sublinhado do link */
 }
 
 header > a {
