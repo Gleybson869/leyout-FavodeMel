@@ -1,9 +1,29 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'Oh Chewy';
+  src: url('../Font/Oh\ Chewy.ttf') format('opentype');
+  font-weight:normal;
+}
+
+:root {
+  --cor1: #FED700;
+  --cor2: #FDC500;
+  --cor3: #D7930C;
+  --cor4: #674E26;
+  --cor5: #1A1007;
+
+  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-bee: 'oh chewy', cursive;
+
+}
+
 * {
     margin: 0px;
     padding: 0px;
 }
+
 body{
    background-image: url(https://i.pinimg.com/236x/a0/30/b3/a030b337b857e1f49f8c4ed5f1e832a2.jpg);
    background-size: cover;
@@ -12,16 +32,42 @@ body{
 }
 
 header {
-    background-color:yellow ;
-    padding: 80px 80px 30px 50px;
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2), var(--cor3));
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    text-align: center;
     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.421);
+}
+
+.logo a {
+  display: flex; /* Coloca o texto e a imagem na mesma linha */
+  align-items: center; /* Centraliza verticalmente o texto em relação à imagem */
+  text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.logo img {
+  margin-right: 5px; /* Ajuste o valor para aproximar ou afastar o texto da imagem */
+  width: 70px; /* Ajuste conforme o tamanho da imagem desejada */
+  height: auto; /* Mantém a proporção da imagem */
+  filter:drop-shadow(4px 3px 5px rgba(0, 0, 0, 0.729));
+}
+
+.logo a:hover {
+  text-decoration: none; /* Adiciona sublinhado ao passar o mouse, se desejar */
+}
+
+.logo a {
+  font-family: var(--fonte-bee);/* Exemplo de fonte para o texto */
+  font-size: 40px; /* Tamanho do texto */
+  color:var(--cor4); /* Cor do texto */
 }
 
 header > a {
     font-size: 1.1em;
-    background-color: rgba(0, 0, 0, 0.97);
+    background-color: var(--cor5);
     color: white;
-    margin: 7px;
+    margin: 40px 3px 3px;
     padding: 5px;
     border-radius: 7px;
     text-decoration: none;
@@ -33,7 +79,7 @@ header > a {
     flex-direction: column;
     align-items: center; /* Centraliza as linhas no container */
     padding: 20px;
-    background-image: url('caminho/para/sua-foto.jpg');
+    background-image: url();
     background-size: cover;
     background-position: center;
   }
@@ -49,7 +95,6 @@ header > a {
   .hexagon {
     width: 100px;
     height: 100px;
-    background-color: transparent;/*trasformando o hexagono em trasparente*/
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     border: 5px solid #FFCC00;
     margin: 1px; /* Espaço entre os hexágonos */
