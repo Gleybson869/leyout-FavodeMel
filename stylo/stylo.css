@@ -3,7 +3,7 @@
 @font-face {
   font-family: 'Oh Chewy';
   src: url('../Font/Oh\ Chewy.ttf') format('opentype');
-  font-weight:normal;
+  font-weight: normal;
 }
 
 :root {
@@ -14,35 +14,39 @@
   --cor5: #1A1007;
 
   --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-destaque: 'Bebas Neue', cursive;
-    --fonte-bee: 'oh chewy', cursive;
-
+  --fonte-destaque: 'Bebas Neue', cursive;
+  --fonte-bee: 'oh chewy', cursive;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Adicionei para garantir que margens e padding sejam incluídos no tamanho total dos elementos */
 }
 
 body{
-   background-image: url(../image/image7.jpg);
-   background-size: cover;
-   background-position: center;
+  font-family: var(--fonte-padrao);
+  background-color: #fed80067;
+  background-size: cover;
+  background-position: center;
+  font-family: var(--fonte-padrao);
+  min-height: 100vh; /* 
+  Garante que o corpo ocupe pelo menos a altura total dajanela */
+  display: flex;
+  flex-direction: column;
 
 }
 
 header {
-    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2), var(--cor3));
-    width: 100%;
-    height: auto;
-    padding: 15px;
-    margin-bottom: 100%;
-    text-align: center;
-    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.421);
-    position: fixed; /* Torna o cabeçalho fixo na parte superior */
-    top: 0; /* Fixa o cabeçalho no topo da página */
-    left: 0; /* Fixa o cabeçalho na borda esquerda */
-    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+  background-image: linear-gradient(to bottom, var(--cor1), var(--cor2), var(--cor3));
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  margin-bottom: 0;
+  text-align: center;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.421);
+  position: fixed; /* Torna o cabeçalho fixo na parte superior */
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
 .logo img {
@@ -66,17 +70,19 @@ header {
 }
 
 header > a {
-    font-size: 1.1em;
-    background-color: var(--cor5);
-    color: white;
-    margin: 40px 3px 3px;
-    padding: 5px;
-    border-radius: 7px;
-    text-decoration: none;
-    box-shadow: 5px 2px 8px rgba(0, 0, 0, 0.296);
+  font-size: 1.1em;
+  background-color: var(--cor5);
+  color: white;
+  margin: 40px 3px 3px;
+  padding: 5px;
+  border-radius: 7px;
+  text-decoration: none;
+  box-shadow: 5px 2px 8px rgba(0, 0, 0, 0.296);
 }
 
-header > a:hover {}
+header > a:hover {
+
+}
 
 .row {
   display:flex;
@@ -94,10 +100,12 @@ header > a:hover {}
   width: 160px;
   height: 170px;
   margin: 3px;
-  background-color: #674E26;
+  background-color: transparent;
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  border: 5px solid #674E26; /* Cor das bordas */
   animation: animation 4s linear infinite; 
-  transition: 1s;
+  transition: transfomr 0.3s ease-out, z-index 0.3s ease-out;
+  position: relative;  /* Adicionei para garantir que os pseudoelementos sejam posicionados corretamente */
 }
 
 .hexagono:hover {
@@ -105,15 +113,18 @@ header > a:hover {}
   transition: 0.1s;
   transform: scale(2.0);/* Aumenta o tamanho do hexágono em 20% */
   z-index: 10; /* Garante que o hexágono em hover fique acima dos outros */
-   transition: transform 0.3s ease-out, z-index 0.3s ease-out; /* Transição mais suave para o zoom in */
+  transition: transform 0.3s ease-out, z-index 0.3s ease-out; /* Transição mais suave para o zoom in */
 }
 
 @keyframes animation {
   0%{
     filter: hue-rotate(0deg);
   }
-  100%{filter: hue-rotate(360deg);}
+  100%{
+    filter: hue-rotate(360deg);
+  }
 }
+
 .hexagono:after{
   content:'';
   position: absolute;
@@ -136,11 +147,13 @@ header > a:hover {}
 }
 
 footer {
-  text-align: center;
-  color: var(--cor5);
+  clear: both;
   background-image:linear-gradient(to bottom, var(--cor1), var(--cor3));
-  padding: 05px;
+  color: var(--cor5);
+  text-align: center;
+  padding: 6px;
   font-weight: bold;
+  margin-top: auto; /* Garante que o rodapé fique na parte inferior da página */
 }
   
 
