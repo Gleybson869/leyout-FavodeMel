@@ -84,10 +84,31 @@ header > a:hover {
 
 }
 
-.row {
+.row1{
   display:flex;
-  margin-top: -45px;
-  margin-left: -170px;
+  margin-top: 25%;
+  margin-left: 33%;
+  align-items: center;
+  justify-content: center;
+}
+.row2{
+  display:flex;
+  margin-top: -6%;
+  margin-left: 11%;
+  align-items: center;
+  justify-content: center;
+}
+.row3{
+  display:flex;
+  margin-top: -6%;
+  margin-left: 33%;
+  align-items: center;
+  justify-content: center;
+}
+.row4{
+  display:flex;
+  margin-top: -6%;
+  margin-left: 33%;
   align-items: center;
   justify-content: center;
 }
@@ -108,21 +129,21 @@ header > a:hover {
   position: relative;  /* Adicionei para garantir que os pseudoelementos sejam posicionados corretamente */
 }
 
+@keyframes borderAnimation {
+  0% {
+    border-color: #674E26; /* Cor inicial da borda */
+  }
+  100% {
+    border-color: #FED700; /* Cor final da borda (ou qualquer outra cor que preferir) */
+  }
+}
+
 .hexagono:hover {
   background-color: var(--cor3);
   transition: 0.1s;
   transform: scale(2.0);/* Aumenta o tamanho do hexágono em 20% */
   z-index: 10; /* Garante que o hexágono em hover fique acima dos outros */
   transition: transform 0.3s ease-out, z-index 0.3s ease-out; /* Transição mais suave para o zoom in */
-}
-
-@keyframes animation {
-  0%{
-    filter: hue-rotate(0deg);
-  }
-  100%{
-    filter: hue-rotate(360deg);
-  }
 }
 
 .hexagono:after{
